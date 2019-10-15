@@ -8,6 +8,7 @@ import {SignIn} from './views';
 import {Dashboard} from './views';
 import {About} from './views';
 import {Prescription} from './views';
+import {ViewPatients} from './views';
 
   const Routes = () => { 
     return (
@@ -38,6 +39,13 @@ import {Prescription} from './views';
         exact
         layout={Index}
         path="/prescriptions"
+      />
+
+      <RouteWithLayout
+        component={ViewPatients}
+        exact
+        layout={Index}
+        path="/viewPatients"
       />
 
       <RouteWithLayout

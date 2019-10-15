@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
-import {Title, NoticesUpdates} from './components';
+import {Title, NoticesUpdates, BookedAppointments, Patients} from './components';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -37,11 +37,13 @@ function Dashboard() {
         </Grid>
 
         <Grid item xs={3}>
-          <Paper className={classes.paper}>Patients</Paper>
+          <Paper className={classes.paper}>
+            <Patients/></Paper>
         </Grid>
 
         <Grid item xs={3}>
-          <Paper className={classes.paper}>View Appointments</Paper>
+          <Paper className={classes.paper}>
+            <BookedAppointments/></Paper>
         </Grid>
 
         <Grid item xs={3}>

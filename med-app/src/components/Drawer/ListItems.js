@@ -2,16 +2,25 @@ import React, { forwardRef } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import {Link as Go} from 'react-router-dom';
 import {Button,ListItem, ListItemIcon, ListItemText,ListItemSubheader, ListSubheader} from '@material-ui/core';
-import {ShoppingCartIcon, BarChartIcon, PeopleIcon, LayersIcon, AssignmentIcon} from '@material-ui/icons';
+import {LayersIcon, AssignmentIcon} from '@material-ui/icons';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import { NavLink as RouterLink } from 'react-router-dom';
+import CreateIcon from '@material-ui/icons/Create';
+import HomeWorkIcon from '@material-ui/icons/HomeWork';
+import PeopleIcon from '@material-ui/icons/People';
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
+import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
+import ClearAllIcon from '@material-ui/icons/ClearAll';
 
+
+
+
+import { NavLink as RouterLink } from 'react-router-dom';
 
 export const mainListItems = (
     <div>
         <ListItem button component={Go} to='/about'>
             <ListItemIcon>
-                <DashboardIcon/>
+                <HomeWorkIcon/>
             </ListItemIcon>
             <ListItemText primary="About" /> 
         </ListItem>
@@ -26,28 +35,28 @@ export const mainListItems = (
         <ListSubheader inset>Practitioners Office</ListSubheader>
         <ListItem button component={Go} to='/myProfile'>
             <ListItemIcon>
-                <DashboardIcon/>
+                <PersonOutlineIcon/>
             </ListItemIcon>
-            <ListItemText primary="Profile"/>
+            <ListItemText primary="Dr. Profile"/>
         </ListItem>
 
-        <ListItem button>
+        <ListItem button component={Go} to='/viewPatients'>
             <ListItemIcon>
-                <DashboardIcon/>
+                <PeopleIcon/>
             </ListItemIcon>
             <ListItemText primary="Patients"/>
         </ListItem>
 
         <ListItem button component={Go} to='/prescriptions'>
             <ListItemIcon>
-                <DashboardIcon/>
+                <CreateIcon/>
             </ListItemIcon>
             <ListItemText primary="Prescriptions"/>
         </ListItem>
 
         <ListItem button>
             <ListItemIcon>
-                <DashboardIcon/>
+                <QuestionAnswerIcon/>
             </ListItemIcon>
             <ListItemText primary="Consultations"/>
         </ListItem>
@@ -60,7 +69,7 @@ export const secondaryListItems=(
         <ListSubheader inset>Files and Records</ListSubheader>
         <ListItem button>
             <ListItemIcon>
-            <DashboardIcon/>
+            <ClearAllIcon/>
                 </ListItemIcon>
             <ListItemText primary="Patient Profile"/>
         </ListItem>

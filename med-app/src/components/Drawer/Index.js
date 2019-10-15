@@ -161,7 +161,7 @@ export default function MedDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography align="center" display="block" component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-           <LocalHospitalIcon fontSize="large"/> Greetings
+           <LocalHospitalIcon fontSize="large"/> MEDdoc.
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">

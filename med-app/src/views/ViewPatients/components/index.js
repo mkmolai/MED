@@ -1,0 +1,1 @@
+export {default as TabOptions} from './TabOptions';
