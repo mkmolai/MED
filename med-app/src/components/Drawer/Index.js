@@ -23,6 +23,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems, tertiaryListItems} from './ListItems';
 import Orders from './Orders';
 import Year from './Year';
+import Profile from './Profile';
 
 function Copyright() {
   return (
@@ -188,6 +189,7 @@ export default function MedDrawer(props) {
           </IconButton>
         </div>
         <Divider />
+        
         <List>{mainListItems}</List>
         <List>{secondaryListItems}</List>
         <List>{tertiaryListItems}</List>
