@@ -4,7 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
-import {Title, NoticesUpdates, BookedAppointments, Patients} from './components';
+import {Title, NoticesUpdates, BookedAppointments, Patients, ProfileLink} from './components';
+import Desk from './assets/Desk.jpg';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -23,11 +24,13 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(2, 0),
   },
 }));
+
+
 function Dashboard() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div background-image={Desk}>
       <Title/>
       <Grid container spacing={3}>
         <Grid item xs={3}>
@@ -47,7 +50,8 @@ function Dashboard() {
         </Grid>
 
         <Grid item xs={3}>
-          <Paper className={classes.paper}>View Profile</Paper>
+          <Paper className={classes.paper}>
+            <ProfileLink/></Paper>
         </Grid>
 
         <Grid item xs={8}>

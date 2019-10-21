@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {Card, CardActionArea,CardActions,CardContent,CardMedia,Button,Typography} from '@material-ui/core';
-import Desk from './assets/Desk.jpg';
+import Profile from './assets/Profile.jpg';
 
 const useStyles = makeStyles({
     card: {
@@ -12,13 +12,13 @@ const useStyles = makeStyles({
     },
   });
 
-const NoticesUpdates = props =>{
+const ProfileLink = props =>{
     const classes = useStyles();
 
     return(
         <Card className={classes.card}>
             <CardActionArea>
-                <CardMedia className={classes.media} image={Desk}/>
+                <CardMedia className={classes.media} image={Profile}/>
                 <CardContent>
                     <Typography>
                         News and Notices
@@ -32,4 +32,4 @@ const NoticesUpdates = props =>{
     );
 }
 
-export default NoticesUpdates;
+export default ProfileLink;

@@ -20,11 +20,11 @@ import Paper from '@material-ui/core/Paper';
           <TableRow>
             <TableCell>First Name</TableCell>
             <TableCell>Surname</TableCell>
-            <TableCell>DOB</TableCell>
+            <TableCell>Gender</TableCell>
+            <TableCell>D.O.B</TableCell>
             <TableCell>ID No.</TableCell>
             <TableCell>Email</TableCell>
             <TableCell>Address</TableCell>
-            <TableCell>Password</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -33,11 +33,12 @@ import Paper from '@material-ui/core/Paper';
               
               <TableCell >{rows.firstname}</TableCell>
               <TableCell >{rows.surname}</TableCell>
+              <TableCell >{rows.gender}</TableCell>
               <TableCell >{rows.dob}</TableCell>
               <TableCell >{rows.id}</TableCell>
               <TableCell >{rows.email}</TableCell>
               <TableCell >{rows.address}</TableCell>
-              <TableCell >{''}</TableCell>
+              
               
             </TableRow>
           

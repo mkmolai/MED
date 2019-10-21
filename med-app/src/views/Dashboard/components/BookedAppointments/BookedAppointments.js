@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {Card, CardActionArea,CardActions,CardContent,CardMedia,Button,Typography} from '@material-ui/core';
-
+import Stethoscope from './assets/Stethoscope.jpg'
 const useStyles = makeStyles({
     card: {
       maxWidth: 345,
@@ -17,7 +17,7 @@ const BookedAppointments = props =>{
     return(
         <Card className={classes.card}>
             <CardActionArea>
-                <CardMedia className={classes.media} image="/static/images/cards/contemplative-reptile.jpg" title="Notice Board"/>
+                <CardMedia className={classes.media} image={Stethoscope}/>
                 <CardContent>
                     <Typography>
                         ViewAppointments

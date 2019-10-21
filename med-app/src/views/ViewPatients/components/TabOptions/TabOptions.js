@@ -7,20 +7,9 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import PatientForm from './PatientForm';
-import ListOne from './ListOne';
+import ListOne from './ListOne'; 
 import ListTwo from './ListTwo';
-
-const rows = {
-  firstname: 'Ekaterina',
-    surname: 'Tankova',
-    dob:'26/03/97',
-    id: 123,
-    email:'magt@SpeechGramma.com',
-    address: 'Harare',
-
-};
-
-
+import  Form from './Form';
 
 function TabPanel(props) {
 
@@ -59,12 +48,15 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function TabOptions() {
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+function TabOptions(onFormCreate,fields) {
 
   const [rows,setRows] = React.useState({
 
     firstname: 'Ekaterin',
     surname: 'Tankova',
+    gender: 'female',
     dob:'26/03/97',
     id: 123,
     email:'magt@SpeechGramma.com',
@@ -99,11 +91,13 @@ function TabOptions() {
         }])
       }}/>
       </TabPanel>
+
       <TabPanel value={value} index="two">
-        <ListOne rows={rows}/>  
+        <ListOne rows={rows} />  
       </TabPanel>
+
       <TabPanel value={value} index="three">
-        <ListTwo/>
+        <Form onCreate={onFormCreate}/>
       </TabPanel>
     </div>
   );

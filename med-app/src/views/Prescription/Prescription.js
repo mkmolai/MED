@@ -38,18 +38,18 @@ const useStyles = makeStyles(theme => ({
     };
   
     return (
-        <div style={{ padding: 100 }}>
-
+      <div>
+      <Typography color="inherit" display="block" variant="h4" style={{ padding: 20 }} >
+            Prescription Desk  
+      </Typography>
       <form className={classes.container} noValidate autoComplete="off">
- 
       <Grid item xs md={9}>
-        <Card><AddCircleIcon fontSize="size"/>
+        <Card>
         <CardHeader
           subheader="Hello, below we've placed the prescription form"
           title="Prescription Form"
         />
         
-
         <Divider />
         <CardContent>
 
@@ -95,9 +95,7 @@ const useStyles = makeStyles(theme => ({
           className={classes.textField}
           margin="normal"
         />
-        
-        
-        
+          
         <TextField
           id="standard-number"
           label="Hospital Number"
@@ -155,8 +153,6 @@ const useStyles = makeStyles(theme => ({
           margin="normal"
         >
 
-         
-
         </TextField>
         <Divider/>
         <TextField
@@ -178,15 +174,13 @@ const useStyles = makeStyles(theme => ({
           className={classes.textField}
           margin="normal"
         />
-       
-        
         </Paper>
         </Grid>
         </CardContent>
         </Card>
         </Grid>
-        
       </form>
+
       </div>
     );
   }
