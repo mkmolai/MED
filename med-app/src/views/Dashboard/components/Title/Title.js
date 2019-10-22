@@ -9,7 +9,7 @@ const Title = props => {
       <Grid container >
         <Grid item xs={12}>
           
-            <Typography color="inherit" display="block" variant="h4" style={{ padding: 20 }} >
+            <Typography color="inherit" display="block" variant="h5" style={{ padding: 0 }} >
               Dashboard 
             </Typography>
             

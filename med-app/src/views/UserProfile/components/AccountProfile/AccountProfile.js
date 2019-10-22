@@ -13,6 +13,7 @@ import {
   Button, 
   LinearProgress
 } from '@material-ui/core';
+import avatar from './assets/marc.jpg';
 
 
 
@@ -42,7 +43,7 @@ const AccountProfile = props =>{ //this is a whole function
     city: 'Los Angeles',
     country: 'USA',
     Role: 'GTM-7',
-    avatar: '/images/avatars/avatar_11.png'
+    avatar: {avatar},
   };
 
   return (
@@ -55,7 +56,7 @@ const AccountProfile = props =>{ //this is a whole function
           <div>
             <Typography
               gutterBottom
-              variant="h2"
+              variant="h4"
             >
               John Doe
             </Typography>
@@ -76,7 +77,7 @@ const AccountProfile = props =>{ //this is a whole function
           </div>
           <Avatar
             className={classes.avatar}
-            src={user.avatar}
+            src={avatar}
           />
         </div>
         <div className={classes.progress}>

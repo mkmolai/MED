@@ -19,7 +19,9 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import MoreIcon from '@material-ui/icons/MoreVertTwoTone';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 import { mainListItems, secondaryListItems, tertiaryListItems} from './ListItems';
 import Orders from './Orders';
 import Year from './Year';
@@ -43,6 +45,9 @@ const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+  },
+  grow: {
+    flexGrow: 1,
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -117,6 +122,12 @@ const useStyles = makeStyles(theme => ({
   fixedHeight: {
     height: 240,
   },
+  sectionDesktop: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+    },
+  },
 }));
 
 
@@ -141,10 +152,16 @@ export default function MedDrawer(props) {
     setOpen(false);
   };
 
+  
+
 
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const menuId = 'primary-search-account-menu';
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-
+const handleProfileMenuOpen = event => {
+    setAnchorEl(event.currentTarget);
+  };
 
   //--------------------------------------------------------------------------------------
   return (
@@ -161,14 +178,39 @@ export default function MedDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
+          
           <Typography align="center" display="block" component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
            <LocalHospitalIcon fontSize="large"/> MEDdoc.
           </Typography>
+
+          <div className={classes.sectionDesktop}>
+          <IconButton edge="end" color="inherit">
+            <Badge badgeContent={4} color="secondary">
+              <MoreIcon />
+            </Badge>
+          </IconButton>
+
+          <IconButton
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit"
+              style={{ paddingRight: 40 }}
+            >
+              <AccountCircle />
+            </IconButton>
+
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
+          </div>
+
+
+
         </Toolbar>
       </AppBar>
 
@@ -193,9 +235,6 @@ export default function MedDrawer(props) {
         <List>{mainListItems}</List>
         <List>{secondaryListItems}</List>
         <List>{tertiaryListItems}</List>
-
-      
-
         <Divider />
         
       </Drawer> 

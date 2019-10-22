@@ -64,7 +64,7 @@ const AccountDetails = props => {
       >
         <CardHeader
           subheader="The information can be edited"
-          title="Profile"
+          title="Your Details"
         />
         <Divider />
         <CardContent>

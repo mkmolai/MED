@@ -15,14 +15,14 @@ const BookedAppointments = props =>{
     const classes = useStyles();
 
     return(
-        <Card className={classes.card}>
+        <Card className={classes.card} >
             <CardActionArea>
                 <CardMedia className={classes.media} image={Stethoscope}/>
                 <CardContent>
-                    <Typography>
+                    <Typography gutterBottom variant="h5" component="p">
                         ViewAppointments
                     </Typography>
-                    <Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
                         In this card you will find all the latest news and public notices regarding the medical field...
                     </Typography>
                 </CardContent>

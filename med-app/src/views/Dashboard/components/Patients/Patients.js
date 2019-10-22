@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link as Go} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import {Card,CardContent,CardActions,Typography,Button} from '@material-ui/core';
 
@@ -47,7 +48,7 @@ function Patients() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">View Patients List</Button>
+        <Button size="small" component={Go} to='/viewPatients'>View Patients List</Button>
       </CardActions>
     </Card>
   );

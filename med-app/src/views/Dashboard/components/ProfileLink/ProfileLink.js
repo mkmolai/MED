@@ -2,6 +2,7 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {Card, CardActionArea,CardActions,CardContent,CardMedia,Button,Typography} from '@material-ui/core';
 import Profile from './assets/Profile.jpg';
+import {Link as Go} from 'react-router-dom';
 
 const useStyles = makeStyles({
     card: {
@@ -17,14 +18,14 @@ const ProfileLink = props =>{
 
     return(
         <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea component={Go} to='/myProfile'>
                 <CardMedia className={classes.media} image={Profile}/>
                 <CardContent>
-                    <Typography>
-                        News and Notices
+                    <Typography gutterBottom variant="h5" component="p">
+                        View Profile
                     </Typography>
-                    <Typography>
-                        In this card you will find all the latest news and public notices regarding the medical field...
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Click on this card to go to your profile...
                     </Typography>
                 </CardContent>
             </CardActionArea>

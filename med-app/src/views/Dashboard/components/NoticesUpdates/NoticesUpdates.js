@@ -20,10 +20,10 @@ const NoticesUpdates = props =>{
             <CardActionArea>
                 <CardMedia className={classes.media} image={Desk}/>
                 <CardContent>
-                    <Typography>
+                    <Typography gutterBottom variant="h5" component="p">
                         News and Notices
                     </Typography>
-                    <Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
                         In this card you will find all the latest news and public notices regarding the medical field...
                     </Typography>
                 </CardContent>
