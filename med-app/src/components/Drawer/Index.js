@@ -50,7 +50,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   toolbar: {
-    paddingRight: 24, // keep right padding when drawer closed
+    paddingRight: 24,
+    color:'black', // keep right padding when drawer closed
   },
   toolbarIcon: {
     display: 'flex',
@@ -165,7 +166,7 @@ const handleProfileMenuOpen = event => {
 
   //--------------------------------------------------------------------------------------
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{backgroundColor: ' grey '}}>
       <CssBaseline />
       <AppBar color="secondary" position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
@@ -232,9 +233,9 @@ const handleProfileMenuOpen = event => {
         </div>
         <Divider />
         
-        <List>{mainListItems}</List>
-        <List>{secondaryListItems}</List>
-        <List>{tertiaryListItems}</List>
+        <List  style={{backgroundColor: ' whitesmoke '}}>{mainListItems}</List>
+        <List  style={{backgroundColor: ' whitesmoke '}}>{secondaryListItems}</List>
+        <List  style={{backgroundColor: ' whitesmoke '}}>{tertiaryListItems}</List>
         <Divider />
         
       </Drawer> 

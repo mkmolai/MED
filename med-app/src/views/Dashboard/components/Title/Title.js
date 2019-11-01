@@ -5,11 +5,11 @@ const Title = props => {
      
     
     return(
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, backgroundColor: ' gainsboro ' }}>
       <Grid container >
-        <Grid item xs={12}>
+        <Grid item xs={12} >
           
-            <Typography color="inherit" display="block" variant="h5" style={{ padding: 0 }} >
+            <Typography color="inherit" display="block" variant="h5" style={{ padding: 0 }}>
               Dashboard 
             </Typography>
             

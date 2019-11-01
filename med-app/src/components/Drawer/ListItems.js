@@ -10,7 +10,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 import ClearAllIcon from '@material-ui/icons/ClearAll';
-
+import EventNoteTwoToneIcon from '@material-ui/icons/EventNoteTwoTone';
 
 
 
@@ -33,13 +33,23 @@ export const mainListItems = (
         </ListItem>
 
         <ListSubheader inset>Practitioners Office</ListSubheader>
+        <ListItem button component={Go} to='/viewToday'>
+            <ListItemIcon>
+                <EventNoteTwoToneIcon/>
+            </ListItemIcon>
+            <ListItemText primary="On Today"/>
+        </ListItem>
+
         <ListItem button component={Go} to='/myProfile'>
             <ListItemIcon>
                 <PersonOutlineIcon/>
             </ListItemIcon>
-            <ListItemText primary="Dr. Profile"/>
+            <ListItemText primary="My Profile"/>
         </ListItem>
 
+        
+
+        
         <ListItem button component={Go} to='/viewPatients'>
             <ListItemIcon>
                 <PeopleIcon/>

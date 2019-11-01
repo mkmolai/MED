@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-  function Prescription() {
+  function  ItemTwo() {
 
     const classes = useStyles();
     const [values, setValues] = React.useState({
@@ -46,18 +46,13 @@ const useStyles = makeStyles(theme => ({
   
     return (
       <div>
-      <Typography color="inherit" display="block" variant="h4" style={{ padding: 20 }} >
-            Prescription Desk  
-      </Typography>
 
-      
-      <div >
-        <form className={classes.container} noValidate autoComplete="off">
-      <Grid item xs md={9} style={{backgroundColor: ' pink', padding: 10}}>
-        <Card>
+      <form className={classes.container}>
+      <Grid item xs md={9}>
+        <Card style={{paddingLeft: 50}}>
         <CardHeader
           subheader="Hello, below we've placed the prescription form"
-          title="Prescription Form"
+          title="Basic Information"
         />
         
         <Divider />
@@ -189,31 +184,11 @@ const useStyles = makeStyles(theme => ({
         </CardContent>
         </Card>
         </Grid>
-        
 
-        <Button
-            color="primary"
-            variant="raised"
-            onClick=''>
-            <SaveIcon/>
-        </Button>
-        <Button
-            color="primary"
-            variant="raised"
-            onClick={onClickPrintHandler}>
-            <PrintTwoToneIcon/>
-        </Button>
-        <Button
-            color="primary"
-            variant="raised"
-            onClick=''>
-            <EmailTwoToneIcon/>
-        </Button>
       </form>
-      </div>
 
       </div>
     );
   }
   
-  export default Prescription;
+  export default ItemTwo;

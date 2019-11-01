@@ -4,3 +4,4 @@ export { default as BookedAppointments } from './BookedAppointments';
 export { default as Patients } from './Patients';
 export { default as ProfileLink } from './ProfileLink';
 export {default as MedicalRecords} from './MedicalRecords';
+export {default as NewPatients} from './NewPatients';

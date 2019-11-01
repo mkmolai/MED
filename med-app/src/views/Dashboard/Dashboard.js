@@ -13,7 +13,7 @@ import Accessibility from "@material-ui/icons/Accessibility";
 import Update from "@material-ui/icons/Update";
 import Warning from '@material-ui/icons/Warning';
 import InfoIcon from '@material-ui/icons/Info';
-import {Title, NoticesUpdates, BookedAppointments, Patients, ProfileLink, MedicalRecords} from './components';
+import {Title, NoticesUpdates, BookedAppointments, Patients, ProfileLink, MedicalRecords, NewPatients} from './components';
 import Desk from './assets/Desk.jpg';
 import {Link as Go} from 'react-router-dom';
 import blueGrey from '@material-ui/core/colors/blueGrey';
@@ -56,7 +56,7 @@ function Dashboard() {
       <Grid container style={{padding: 40}}>
         <Grid item xs={12}>
           <Paper>
-             <Title/>
+             <Title />
           </Paper>
         </Grid>
       </Grid>
@@ -71,7 +71,7 @@ function Dashboard() {
       
     >
       <Grid item xs={12} sm={6} md={3} style={{paddingLeft: 50}}>
-      <Card>
+      <Card >
 
         <CardHeader color="warning" stats icon>
           <CardIcon color="warning">
@@ -159,8 +159,8 @@ function Dashboard() {
       
 
       <Grid container spacing={3}>
-        <Grid item xs={3} style={{ paddingLeft: 60 }}>
-          <Paper className={classes.paper}>
+        <Grid item xs={3} style={{ paddingLeft: 60}}>
+          <Paper className={classes.paper} style={{backgroundColor: ' whitesmoke '}}>
           <NoticesUpdates/>
           </Paper>
         </Grid>
@@ -183,12 +183,16 @@ function Dashboard() {
           </Paper>
         </Grid>
 
-        <Grid item xs={8}>
-          <Paper className={classes.paper}>Table goes here</Paper>
+        <Grid item xs={4} style={{ paddingLeft: 60 }}>
+          <Paper className={classes.paper}>
+            xs=4
+            </Paper>
         </Grid>
 
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>xs=4</Paper>
+        <Grid item xs={8} style={{ paddingRight: 60 }}>
+          <Paper className={classes.paper}>
+            <NewPatients/>
+            </Paper>
         </Grid>
 
       </Grid>
@@ -198,7 +202,7 @@ function Dashboard() {
         <Grid container style={{padding: 40}}>
         <Grid item xs={12}>
           <Paper >
-            <Typography color="inherit" display="block" variant="h5" style={{ padding: 10 }}>
+            <Typography style={{backgroundColor: ' #e7e8ea '}} display="block" variant="h5" style={{ padding: 10 }}>
                Document Quick Links
             </Typography>
           </Paper>

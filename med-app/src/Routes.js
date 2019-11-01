@@ -9,6 +9,8 @@ import {Dashboard} from './views';
 import {About} from './views';
 import {Prescription} from './views';
 import {ViewPatients} from './views';
+import {ToDos} from './views';
+import {File} from './views';
 
   const Routes = () => { 
     return (
@@ -42,6 +44,13 @@ import {ViewPatients} from './views';
       />
 
       <RouteWithLayout
+        component={ToDos}
+        exact
+        layout={Index}
+        path="/viewToday"
+      />
+
+      <RouteWithLayout
         component={ViewPatients}
         exact
         layout={Index}
@@ -60,7 +69,12 @@ import {ViewPatients} from './views';
         layout={Index}
         path="/myProfile"
       />
-       
+       <RouteWithLayout
+        component={File}
+        exact
+        layout={Index}
+        path="/patientRecord"
+      />
       </Switch>
     );
   };
